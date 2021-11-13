@@ -1,0 +1,19 @@
+name: fanficfare-mvo
+version: 4.7.0
+summary: Makes reading stories from various websites
+description: |
+ FanFicFare makes reading stories from various websites much
+ easier by helping you download them to EBook files.
+base: core20
+ 
+parts:
+  fanficfare:
+    plugin: python
+    source: https://github.com/JimmXinu/FanFicFare/
+    source-type: git
+    source-tag: v4.7.0
+
+apps:
+  fanficfare-mvo:
+    command: bin/fanficfare
+    plugs: [home]
